@@ -19,7 +19,7 @@ def bus1(spotify):
         if busca==x["Artista"]:
             print("El artista registrado es:",busca)
         else:
-            print(busca,"No esta registrado el artista rectifique:")
+            print(busca,"No esta registrado el artista rectifique")
 can(art)
 com(art)
 bus1(art)
