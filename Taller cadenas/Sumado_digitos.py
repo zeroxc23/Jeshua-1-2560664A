@@ -1,5 +1,4 @@
-#Pida una cadena por teclado y diga cual es su valor al sumar sus codigos/
-# Cual es el valor numerico de acuerdo a los códigos del alfabeto
+#Pida una cadena por teclado y diga cual es su valor al sumar sus codigos/Cual es el valor numerico de acuerdo a los códigos del alfabeto
 def dig(a):
     list=[]
     suma=0
