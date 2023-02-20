@@ -1,3 +1,4 @@
+#Cuantas letras del abecedario estan en la cadena, si estan repetidas cuentela solo una vez
 def let(pe):
     cont=0
     numb=''
