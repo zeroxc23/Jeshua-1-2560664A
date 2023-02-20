@@ -12,6 +12,7 @@ def codi(a):
             sad+=str(cod1.index(a[i]))
         else:
             sad+=a[i]
-    print(sad)            
+    print(sad)
+    print("Palabra escogida:",a) 
 x=input('Ingrese palabra a encriptar:')
 codi(x)   
