@@ -9,8 +9,8 @@ class Persona:                                     #Se define o crea la clase ll
 
     def getdocum(self):                            #Se define el metodo getdocum para que que realice el proceso del numero de documento ingresado 
         return self.__documento                    #Devuelve el atributo documento para imprimirlo incluso estando privado
-    def setNombre(self,nombre):                    #Se define el metodo setNombre para que realice el proceso con el nombre ingresado
-        self.__nombre=nombre                       #Se define el atributo relacionando con el parametro nombre 
+    def setNombre(self,nombre):                    #Se define el metodo setNombre para que realice el proceso con el nombre ingresado/de momento no se llama
+        self.__nombre=nombre                       #Se define el atributo relacionando con el parametro nombre/de momento no se llama 
     def docum(self,documento):                     #Se define el metod docum para que realice el proceso con el parametro documento
         self.__documento=documento                 #Se define el atributo relacionando con el parametro documento 
 class aprendiz(Persona):                           #Se define la herencia aprendiz determinando la relación con la clase padre persona
