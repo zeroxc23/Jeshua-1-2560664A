@@ -14,7 +14,7 @@ class Persona:                                     #Se define o crea la clase ll
     def docum(self,documento):                     #Se define el metod docum para que realice el proceso con el parametro documento
         self.__documento=documento                 #Se define el atributo relacionando con el parametro documento 
 class aprendiz(Persona):                           #Se define la herencia aprendiz determinando la relación con la clase padre persona
-    def __init__(self,ficha,nombre,documento):     #Se define el metodo del constructor con sus parametros y uno nuevo que es ficha
+    def __init__(self,nombre,documento,ficha,):     #Se define el metodo del constructor con sus parametros y uno nuevo que es ficha
         self.__ficha=ficha                         #Se define el atributo relacionando con el parametro ficha
         Persona.__init__(self,nombre,documento)    #Se realiza un init para relacionar los parametros con la clase padre
     def getficha(self):                            #Se define el metodo getficha para que realice el proceso del numero de ficha ingresado
