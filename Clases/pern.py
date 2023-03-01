@@ -22,6 +22,6 @@ class aprendiz(Persona):                           #Se define la herencia aprend
     def gettodo(self):                             #Se define el metodo gettodo
         print("Documento:",app.getdocum())         #Se imprime el metodo getdocum con el objeto app
         print("Nombre:",app.getNombre())            #Se imprime el metodo getNombre con el objeto app
-        print("Ficha:,app.getficha())            #Se imprime el metodo getficha con el objeto app
+        print("Ficha:",app.getficha())            #Se imprime el metodo getficha con el objeto app
 app=aprendiz("luis",464654,38726847628)            #Se define el objeto
 print(app.gettodo())                               #Se imprime el metodo gettodo para que llame los metodos de la clase padre desde la herencia aprendiz
