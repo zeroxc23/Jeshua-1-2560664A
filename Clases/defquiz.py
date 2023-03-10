@@ -131,7 +131,7 @@ class reserva:
 while True:
     print("-----------------")
     print("1-Inicar sesión")
-    print("2-Completar información entorno a tipo de cuenta")
+    print("2-Confirmar el tipo de cuenta:")
     print("3-Datos del material que solicita reservar:")
     print("4-Datos del pedido:")
     print("5-Consultar reservas:")
