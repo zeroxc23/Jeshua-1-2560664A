@@ -19,11 +19,12 @@ class lector:
         return self.__telefono
     def gettodo(self):
         print("-----------------")
-        print("Datos de usuario")
+        print("BIENVENIDO")
+        print("Datos del usuario")
         print("Nombre:", a.getnombre())
         print("Dirección:", a.getdireccion())
         print("Telefono:", a.gettelefono())
-        print("Id del bibliotecario: responsable",a.getID())
+        print("Id del bibliotecario responsable:",a.getID())
 class pedido:
     def __init__(self,id,titulo,codigo,usuario):
         self.__id=id
@@ -32,10 +33,13 @@ class pedido:
         self.__usuario=usuario
     def getusuario(self):
         if self.__usuario=="1":
+            print("-----------------")
             print("Ingreso con la cuenta estudiante")
         elif self.__usuario=="2":
+            print("-----------------")
             print("Ingreso con la cuenta docente")
         else:
+            print("-----------------")
             print("Usuario no encontrado")
     def getid(self):
         return self.__id
@@ -87,18 +91,21 @@ class entrega(libro,revista):
     def getlib(self,nota1):
         if nota1=="l":
             print("-----------------")
-            print("Datos libro")
+            print("Datos del libro")
             print("Titulo:",a1.gettitulo())
             print("Tipo:",a1.gettipo())
             print("Autor:",a1.getautor())
             print("Editorial:",a1.geteditorial())
         elif nota1=="r":
             print("-----------------")
-            print("Datos revista")
+            print("Datos de la revista")
             print("Titulo:",a1.gettitulo1())
             print("Tipo:",a1.gettipo1())
             print("Autor:",a1.getautor1())
             print("Editorial:",a1.geteditorial1())
+        else:
+            print("-----------------")
+            print("Caracter no valido")
 class reserva:
     def __init__(self,fechai,fechafin,fechai1,fechafin1,dato):
         self.__fechai=fechai
@@ -119,12 +126,14 @@ class reserva:
     def getdatof(self,dato):
         if dato=="3":
             print("-----------------")
-            print("Fechas libro")
+            print("LIBRO")
+            print("Disponibilidad")
             print("Fecha inicio:",l.getfechai())
             print("Fecha fin:",l.getfechaf())
         elif dato=="4":
             print("-----------------")
-            print("Fechas revista")
+            print("REVISTA")
+            print("Disponibilidad")
             print("Fecha inicio:",l.getfechai1())
             print("Fecha fin:",l.getfechaf1())
 
@@ -148,11 +157,12 @@ while True:
         case 2:
             print("-----------------")
             n=input("Ingrese 1 si es estudiante//Ingrese 2 si es docente:")
+            h=lector("h","o","l","a")
             usu=pedido(2324,"Solicitud de reserva",8383,n)
-            a.agregar(usu)
-            for c in a.verusuarios():
-               print(c.getusuario())
-               break
+            h.agregar(usu)
+            for c in h.verusuarios():
+                print(c.getusuario())
+                break
         case 3:
             print("-----------------")
             print("Datos del libro y revista disponible")
