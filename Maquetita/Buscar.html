@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/def.css">
+  <link rel="icon" href="img/icono.ico">
+<title> Búsqueda</title>
+<style>
+  body {
+    background-image: url(img/fond1.jpg);
+        background-size:cover;
+  }
+ 
+</style>
+</head>
+<body>
+    <header><H1>NAVEGACIÓN</H1></header>
+    <br>
+    <div class="contenido3">
+        <br>
+        <div class="men">
+  <nav>
+    <ul id="listaNavegacion">
+        <li><a href="Registro.html" class="act">Registro</a></li>
+        <li><a href="Inicio_sesion.html" class="act">Iniciar Sesión</a></li>
+        <li><a href="Index.html" class="act">Principal</a></li>
+    </ul>
+  </nav>
+</div>
+<br>
+  <div>
+    <h2>Resultado:</h2>
+    <p id="resultado"></p>
+  </div>
+  <br>
+  <div>
+    <h2>Barra de Búsqueda:</h2>
+    <br>
+    <input type="text" id="barraBusqueda" class ="bot1" placeholder="Buscar...">
+    <ul id="resultadosBusqueda"></ul>
+  </div>
+  <br>
+  <script>
+    const listaNavegacion = document.getElementById('listaNavegacion');
+    const resultado = document.getElementById('resultado');
+    const barraBusqueda = document.getElementById('barraBusqueda');
+    const resultadosBusqueda = document.getElementById('resultadosBusqueda');
+
+    listaNavegacion.addEventListener('click', (event) => {
+      if (event.target.tagName === 'A') {
+        const nombrePagina = event.target.textContent;
+        resultado.textContent = `Has seleccionado: ${nombrePagina}`;
+      }
+    });
+
+    barraBusqueda.addEventListener('input', () => {
+      const searchTerm = barraBusqueda.value.toLowerCase();
+      resultadosBusqueda.innerHTML = '';
+
+      Array.from(listaNavegacion.children).forEach((li) => {
+        const anchor = li.querySelector('a');
+        if (anchor.textContent.toLowerCase().includes(searchTerm)) {
+          resultadosBusqueda.appendChild(li.cloneNode(true));
+        }
+      });
+
+      if (resultadosBusqueda.children.length === 0) {
+        resultadosBusqueda.innerHTML = '<li>No se encontraron resultados.</li>';
+      }
+    });
+  </script>
+  <br>
+  <div class="img">
+    <img src="img/fantasma-sonriendo_5120x2880_xtrafondos.com.jpg" alt="">
+  </div>
+  <div class="final"></div>
+</body>
+</html>

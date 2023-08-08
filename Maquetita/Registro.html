@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/def.css">
+  <link rel="icon" href="img/icono.ico">
+  <!-- Función de alerta JAVA-->
+  <script>
+    function enviar(){
+        alert("Enviando ._.");
+    }
+    
+
+</script>
+<style>
+    body{
+        background-image: url(img/fond1.jpg);
+        background-size:cover;
+    }
+</style>
+  <title>Registro</title>
+  <!-- Agrega los enlaces a los archivos de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1>REGISTRO</h1>
+</header>
+<br>
+<div class="contenido2">
+  <form class="row g-3 needs-validation" novalidate>
+    <div class="col-md-4">
+      <label for="validationServer01" class="form-label">NOMBRE</label>
+      <input type="text" class="form-control" id="validationServer01" value="" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <br>
+    <div class="col-md-4">
+      <label for="validationServer02" class="form-label">APELLIDO</label>
+      <input type="text" class="form-control" id="validationServer02" value="" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationServerUsername" class="form-label">CORREO</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="inputGroupPrepend3">@</span>
+        <input type="text" class="form-control" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+          Please choose a username.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="validationServer03" class="form-label">TELEFONO</label>
+      <input type="text" class="form-control" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+      <div id="validationServer03Feedback" class="invalid-feedback">
+        Please provide a valid city.
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationServer04" class="form-label">TIPO DE DOCUMENTO</label>
+      <select class="form-select" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+        <option selected disabled value="">Selecione...</option>
+        <option>Cedula</option>
+        <option>Tarjeta de identidad</option>
+        <option>Pasaporte</option>
+      </select>
+      <div id="validationServer04Feedback" class="invalid-feedback">
+        Please select a valid state.
+      </div>
+    </div>
+    
+    
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+        <label class="form-check-label" for="invalidCheck3">
+          TERMINOS Y CONDICIONES
+        </label>
+        <div id="invalidCheck3Feedback" class="invalid-feedback">
+          You must agree before submitting.
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="col-12">
+      <center><button class="boton" type="submit" onclick="enviar()">REGISTRARSE</button></center>
+    </div>
+  </form>
+</div>
+</div>
+
+<script>
+  // Añadir el evento de validación a la función de envío del formulario
+  const form = document.querySelector('.needs-validation');
+
+  form.addEventListener('submit', function(event) {
+    if (!form.checkValidity()) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    form.classList.add('was-validated');
+  });
+</script>
+<br>
+<div class="menu">
+    <nav>
+    <ul>
+        <li><a href="Index.html" class="act">Principal</a></li>
+        <li><a href="Inicio_sesion.html" class="act">Iniciar Sesión</a></li>
+        <li><a href="Buscar.html" class="act">Busqueda</a></li>
+        
+    </ul>
+</nav>
+</div>
+<br>
+    <div class="final"></div>
+</body>
+</html>
